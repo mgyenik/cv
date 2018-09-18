@@ -1,0 +1,152 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\usepackage{tabularx}
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75, top=3cm, bottom=1cm]{geometry}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\firstname{Michael}
+\familyname{Yenik}
+%\title{Resumé title}                               % optional, remove / comment the line if not wanted
+%\address{street and number}{postcode city}{country}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\mobile{(704)~564~3560}                          % optional, remove / comment the line if not wanted
+\email{mgyenik77@gmail.com}                               % optional, remove / comment the line if not wanted
+\extrainfo{github.com/mgyenik}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\vspace*{-5\baselineskip}
+\makecvtitle
+\vspace*{-3\baselineskip}
+\section{Education}
+\cventry{2010 -- 2014}{B.S. in Computer Engineering}{NC State
+University}{Raleigh, NC}{}{GPA: 3.6/4.0}
+
+\section{Experience}
+
+\subsection{Industry}
+\cventry{May 2016 -- Present}{Software Engineer - Embedded}{Google}{Seattle, WA}{}
+{I currently work on embedded projects in Google's Research and Machine
+Intelligence group. I work on a team that seeks to apply machine intelligence
+models to problems which require computation at the "edge" such as Google Clips. I
+work on everything from board bringup at the factory to adaptive JPEG
+quantizaiton algorithms that run on special DSP cores.}
+\cventry{January 2015 -- May 2016}{Software Engineer - Production Linux
+Kernel}{Google}{Kirkland, WA}{}
+{I worked on a now public project, gVisor, on virtualization technology. My work
+was both inside the kernel, from the lowest level of interacting with page
+tables and Intel vmx instructions, all the way to the higher levels of talking
+to users of gVisor and creating an improved API that made the technology easier to
+use.}
+\cventry{Summer 2014}{Software Engineering Intern - Production Linux
+Kernel}{Google}{Mountain View, CA}{}
+{I helped with the foundations of the project now released to the public called
+gVisor, working to get some of the initial kernel support and guest ring 0/ring
+3 components demonstrated. I would later come back full time to help fully
+develop gVisor.}
+
+\cventry{Summer 2013}{Software Engineering Intern - Production Linux
+Kernel}{Google}{Mountain View, CA}{} {I ported the kernel feature "restartable
+  sequences" to a new architecture, a very cool kernel optimization to make
+certain thread synchronization operations much faster, which required a
+considerable amount of crafty assembly programming to get the userspace side
+working. After that I worked on process save/restore with CRIU.}
+
+\subsection{Independent}
+\cventry{April 2018 -- Present}{Acid Rain Technology}{}{}{}
+{Sole engineer/embedded developer in Acid Rain Technology LLC. A friend and
+I started a small company that makes modular synthesizer modules. I take our
+ideas, design circuits to implement them, write any embedded software needed,
+and prepare the files for our CM to have the modules manufactured.}
+
+\subsection{Extracurricular}
+\cventry{}{NCSU Aerial Robotics Club}{}{}{}
+{While in the NCSU Aerial Robotics Club I was one of the main developers for the
+payload electronics system. I worked on systems integration of our flight
+computer and ground image processing system, designed the power electronics used
+in the aircraft, worked on the ground based tracking antenna to point at the
+plane, and many other projects over 4 years. I was the Vice President of the
+club one of the years I was involved.}
+
+\section{Skills}
+\cventry{}{Technical Skills}{}{}{}{I have varying experience with the following
+keywords, from highly experienced and knowledgeable to just dabbling in my
+free time. I am the most experienced with embedded C/C++ on ARM
+(especially STM32) and AVR microcontrollers, and Linux kernel development. A typical
+day of hobbies for me is wrangling vendor SDKs with makefiles and linker
+scripts, and writing interrupt handlers and peripheral drivers.}
+\cventry{}{Languages}{}{}{}{
+C, C++, Go, asm (lots of architectures), Python, Rust}
+%\cventry{}{Highly experienced and proficient in:}{}{}{}
+\begin{center}
+%\begin{tabularx}{.95\textwidth}{C|C}
+%  C,  C++, Go, asm (lots of architectures), Python
+%\end{tabularx}
+\cventry{}{Other Technology}{}{}{}{
+Git, GNU Make, Vim, Emacs, tmux, gdb, LLVM/GCC toolchains,
+Protobuf, ARM, STM32, AVR, PowerPC, Arduino, linker scripts, device tree, Bazel,
+bash, zsh, ssh, docker, Linux kernel
+}
+%\begin{tabularx}{.95\textwidth}{C|C}
+%  Git, Make, Vim, Emacs (I am a recent convert), tmux, gdb, LLVM/GCC toolchains,
+%  Protobuf
+%\end{tabularx}
+\end{center}
+
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+%\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+\clearpage
+\end{document}
+
+
+%% end of file `template.tex'.
